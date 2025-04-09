@@ -12,54 +12,7 @@ import ChooseUs from "./Components/ChooseUs";
 import BlogSection from "./Components/BlogsSection";
 import { getData } from "@/libs/axios/server";
 
-const heroData = {
-  primarySlider: [
-    {
-      bgImageUrl: "/assets/img/hero_slider_3.jpg",
-      title: "We Hospital Doctors Patients <span>Service.</span>",
-      contactSubtitle:
-        "Medical ers piciatis unde omnis iste natus this the word medical this mountains, far from the countries Vokalia and, live the docor white teeth sitting on a dental for best medical.",
-      contactTitle: "Receive Medical Service.",
-      contact: "Call Us at: (+2) 56 54 1453",
-      btnText1: "Contact Now",
-      link: "/contact",
-      btnText2: "Discover More",
-      link2: "/about",
-      iconImgUrl: "/assets/img/icons/hero_icon.png",
-    },
-    {
-      bgImageUrl: "/assets/img/hero_slider_2.jpg",
-      title: "Your Center for <br>Mental <span>Health.</span>",
-      contactSubtitle:
-        "Medical ers piciatis unde omnis iste natus this the word medical this mountains, far from the countries Vokalia and, live the docor white teeth sitting on a dental for best medical.",
-      contactTitle: "Receive Medical Service.",
-      contact: "Call Us at: (+2) 56 54 1453",
-      btnText1: "Contact Now",
-      link: "/contact",
-      btnText2: "Discover More",
-      link2: "/about",
-      iconImgUrl: "/assets/img/icons/hero_icon.png",
-    },
-    {
-      bgImageUrl: "/assets/img/hero_slider_1.jpg",
-      title: "We Hospital Doctors Patients <span>Service.</span>",
-      contactSubtitle:
-        "Medical ers piciatis unde omnis iste natus this the word medical this mountains, far from the countries Vokalia and, live the docor white teeth sitting on a dental for best medical.",
-      contactTitle: "Receive Medical Service.",
-      contact: "Call Us at: (+2) 56 54 1453",
-      btnText1: "Contact Now",
-      link: "/contact",
-      btnText2: "Discover More",
-      link2: "/about",
-      iconImgUrl: "/assets/img/icons/hero_icon.png",
-    },
-  ],
-  secondarySlider: [
-    "/assets/img/hero_slider_sm_1.png",
-    "/assets/img/hero_slider_sm_2.png",
-    "/assets/img/hero_slider_sm_3.png",
-  ],
-};
+
 
 const ctaData = {
   imageUrl: "/assets/img/cta_img_1.jpg",
