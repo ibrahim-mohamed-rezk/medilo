@@ -16,11 +16,11 @@ const data = {
   contact: [
     {
       icon: 'fa-regular fa-clock',
-      text: 'Open Hours of Government: <br /> Mon - Fri: 8.00 am. - 6.00 pm.',
+      text: 'ساعات عمل الحكومة: <br /> الاثنين - الجمعة: 8.00 صباحًا - 6.00 مساءً.',
     },
     {
       icon: 'fa-solid fa-location-dot',
-      text: '13/A, Miranda Halim City.',
+      text: '13/أ، ميراندا حليم سيتي.',
     },
     {
       icon: 'fa-solid fa-phone',
@@ -35,23 +35,23 @@ const data = {
   ],
   widgets: [
     {
-      title: 'Service',
+      title: 'الخدمات',
       links: [
-        { href: '#', text: 'Why choose us' },
-        { href: '#', text: 'Our solutions' },
-        { href: '#', text: 'Partners' },
-        { href: '#', text: 'Core values' },
-        { href: '#', text: 'Our projects' },
+        { href: '#', text: 'لماذا تختارنا' },
+        { href: '#', text: 'حلولنا' },
+        { href: '#', text: 'شركاؤنا' },
+        { href: '#', text: 'قيمنا الأساسية' },
+        { href: '#', text: 'مشاريعنا' },
       ],
     },
     {
-      title: 'Quick Link',
+      title: 'روابط سريعة',
       links: [
-        { href: '#', text: 'Residents' },
-        { href: '#', text: 'Business' },
-        { href: '#', text: 'Online Service' },
-        { href: '#', text: 'Visiting' },
-        { href: '#', text: 'Employment' },
+        { href: '#', text: 'المقيمين' },
+        { href: '#', text: 'الأعمال' },
+        { href: '#', text: 'الخدمة عبر الإنترنت' },
+        { href: '#', text: 'الزيارة' },
+        { href: '#', text: 'التوظيف' },
       ],
     },
   ],
@@ -59,22 +59,22 @@ const data = {
     {
       href: '/blog/blog-details',
       image: 'assets/img/recent_post_1.png',
-      date: '23 jun 2024',
-      title: 'We round Solution york Blog',
+      date: '23 يونيو 2024',
+      title: 'نقدم حلول شاملة لمدونة يورك',
     },
     {
       href: '/blog/blog-details',
       image: 'assets/img/recent_post_2.png',
-      date: '20 jun 2024',
-      title: 'The Medical Of This Working Health',
+      date: '20 يونيو 2024',
+      title: 'الطب في هذه الصحة العملية',
     },
   ],
-  copyrightText: 'Copyright © 2024 Medilo, All Rights Reserved.',
+  copyrightText: 'حقوق النشر © 2024 ميديلو، جميع الحقوق محفوظة.',
   footerMenu: [
-    { href: 'about.html', text: 'About Us' },
-    { href: '#', text: 'Events' },
-    { href: 'blog.html', text: 'News' },
-    { href: 'service.html', text: 'Service' },
+    { href: 'about.html', text: 'من نحن' },
+    { href: '#', text: 'الفعاليات' },
+    { href: 'blog.html', text: 'الأخبار' },
+    { href: 'service.html', text: 'الخدمات' },
   ],
 };
 
@@ -83,8 +83,8 @@ const Footer = () => {
     backgroundImage: '/assets/img/footer_bg.jpg',
     logo: '/assets/img/footer_logo.svg',
     contactText:
-      'Open Hours of Government: <br /> Mon - Fri: 8.00 am. - 6.00 pm.',
-    contactText2: '13/A, Miranda Halim City.',
+      'ساعات عمل الحكومة: <br /> الاثنين - الجمعة: 8.00 صباحًا - 6.00 مساءً.',
+    contactText2: '13/أ، ميراندا حليم سيتي.',
     contactText3: '099 695 695 35',
     facebookHref: '/',
     pinterestHref: '/',
@@ -92,23 +92,23 @@ const Footer = () => {
     instagramHref: '/',
     widgets: [
       {
-        title: 'Service',
+        title: 'الخدمات',
         links: [
-          { href: '/service/service-details', text: 'Plastic Surgery' },
-          { href: '/service/service-details', text: 'Pharmacology' },
-          { href: '/service/service-details', text: 'Dental Care' },
-          { href: '/service/service-details', text: 'Dental Care' },
-          { href: '/service/service-details', text: 'Orthopedic' },
+          { href: '/service/service-details', text: 'جراحة التجميل' },
+          { href: '/service/service-details', text: 'علم الأدوية' },
+          { href: '/service/service-details', text: 'رعاية الأسنان' },
+          { href: '/service/service-details', text: 'رعاية الأسنان' },
+          { href: '/service/service-details', text: 'جراحة العظام' },
         ],
       },
       {
-        title: 'Quick Link',
+        title: 'روابط سريعة',
         links: [
-          { href: '/', text: 'Home' },
-          { href: '/about', text: 'About Us' },
-          { href: '/service', text: 'Our Services' },
-          { href: '/portfolio', text: 'Our Portfolio' },
-          { href: '/contact', text: 'Contact' },
+          { href: '/', text: 'الرئيسية' },
+          { href: '/about', text: 'من نحن' },
+          { href: '/service', text: 'خدماتنا' },
+          { href: '/portfolio', text: 'أعمالنا' },
+          { href: '/contact', text: 'اتصل بنا' },
         ],
       },
     ],
@@ -116,22 +116,22 @@ const Footer = () => {
       {
         href: '/blog/blog-details',
         image: '/assets/img/recent_post_1.png',
-        date: '23 jun 2024',
-        title: 'We round Solution york Blog',
+        date: '23 يونيو 2024',
+        title: 'نقدم حلول شاملة لمدونة يورك',
       },
       {
         href: '/blog/blog-details',
         image: '/assets/img/recent_post_2.png',
-        date: '20 jun 2024',
-        title: 'The Medical Of This Working Health',
+        date: '20 يونيو 2024',
+        title: 'الطب في هذه الصحة العملية',
       },
     ],
-    copyrightText: 'Copyright © 2024 Medilo, All Rights Reserved.',
+    copyrightText: 'حقوق النشر © 2024 ميديلو، جميع الحقوق محفوظة.',
     footerMenu: [
-      { href: '/about', text: 'About Us' },
-      { href: '/', text: 'Events' },
-      { href: '/blog', text: 'News' },
-      { href: '/service', text: 'Service' },
+      { href: '/about', text: 'من نحن' },
+      { href: '/', text: 'الفعاليات' },
+      { href: '/blog', text: 'الأخبار' },
+      { href: '/service', text: 'الخدمات' },
     ],
   };
 
@@ -233,7 +233,7 @@ const Footer = () => {
 
           <div className="cs_footer_col">
             <div className="cs_footer_widget">
-              <h2 className="cs_footer_widget_title">Recent Posts</h2>
+              <h2 className="cs_footer_widget_title">المنشورات الأخيرة</h2>
               <ul className="cs_recent_post_list cs_mp_0">
                 {data.recentPosts.map((post, index) => (
                   <li key={index}>

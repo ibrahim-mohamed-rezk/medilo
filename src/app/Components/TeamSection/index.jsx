@@ -10,42 +10,60 @@ import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
 import Link from "next/link";
 import Image from "next/image";
+import { homeDocorsData } from "@/libs/data/data";
 
-const TeamSection = ({ data, bgColor, variant, hr }) => {
+const TeamSection = ({ doctors = [], bgColor, variant = "cs_pagination cs_style_1", hr }) => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: doctors?.length > 3,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: Math.min(3, doctors?.length || 1),
+    slidesToScroll: 1,
     swipeToSlide: true,
     appendDots: (dots) => (
       <div>
         <ul>{dots}</ul>
       </div>
     ),
-    dotsClass: `${variant}`,
+    dotsClass: variant,
+    rtl: true,
+    arrows: doctors?.length > 3,
+    horizontal: true,
+    vertical: false,
     responsive: [
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: Math.min(3, doctors?.length || 1),
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: Math.min(2, doctors?.length || 1),
+          arrows: false,
         },
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
   };
 
+  if (!doctors || doctors.length === 0) {
+    return null;
+  }
+
   return (
     <div className="about-team">
       <div className="container">
         <SectionHeading
-          SectionSubtitle={data.subtitle}
-          SectionTitle={data.title}
+          SectionSubtitle={homeDocorsData?.subtitle || "Our Team"}
+          SectionTitle={homeDocorsData?.title || "Meet Our Doctors"}
           variant={"text-center"}
         />
 
@@ -54,7 +72,7 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
           <div className="cs_slider_container">
             <div className="cs_slider_wrapper">
               <Slider {...settings}>
-                {data?.sliderData.map((item, index) => (
+                {doctors.map((item, index) => (
                   <div className="cs_slide" key={index}>
                     <div
                       className={`cs_team cs_style_1 ${
@@ -66,36 +84,55 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
                           bgColor ? "cs_blue_bg" : "cs_accent_bg "
                         }`}
                       />
-                      <Link href={item.link} className="cs_team_thumbnail">
-                      <Image src={item.imageUrl} alt="img" width={306} height={429}   />
+                      <Link href={item?.slug || "#"} className="cs_team_thumbnail">
+                        {item?.image && (
+                          <Image
+                            src={typeof item.image === 'string' && 
+                              /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item.image) 
+                              ? item.image : '/assets/img/team_1.jpg'}
+                            alt={item.name || "Doctor"}
+                            width={306}
+                            height={429}
+                          />
+                        )}
                       </Link>
                       <div className="cs_team_bio">
                         <h3 className="cs_team_title cs_extra_bold mb-0">
-                          <Link href={item.link}>{item.name}</Link>
+                          <Link href={item?.slug || "#"}>{item?.name || `Doctor ${index + 1}`}</Link>
                         </h3>
-                        <p className="cs_team_subtitle">{item.profession}</p>
-                        <div className="cs_social_btns cs_style_1">
-                          <Link href={item.facebook} className="cs_center">
-                            <i>
-                              <FaFacebookF />
-                            </i>
-                          </Link>
-                          <Link href={item.pinterest} className="cs_center">
-                            <i>
-                              <FaPinterestP />
-                            </i>
-                          </Link>
-                          <Link href={item.twitter} className="cs_center">
-                            <i>
-                              <FaTwitter />
-                            </i>
-                          </Link>
-                          <Link href={item.instagram} className="cs_center">
-                            <i>
-                              <FaInstagram />
-                            </i>
-                          </Link>
-                        </div>
+                        <p className="cs_team_subtitle">{item?.professional || "Specialist"}</p>
+                        {item?.showSocial && (
+                          <div className="cs_social_btns cs_style_1">
+                            {item?.facebook && (
+                              <Link href={item.facebook} className="cs_center">
+                                <i>
+                                  <FaFacebookF />
+                                </i>
+                              </Link>
+                            )}
+                            {item?.pinterest && (
+                              <Link href={item.pinterest} className="cs_center">
+                                <i>
+                                  <FaPinterestP />
+                                </i>
+                              </Link>
+                            )}
+                            {item?.twitter && (
+                              <Link href={item.twitter} className="cs_center">
+                                <i>
+                                  <FaTwitter />
+                                </i>
+                              </Link>
+                            )}
+                            {item?.instagram && (
+                              <Link href={item.instagram} className="cs_center">
+                                <i>
+                                  <FaInstagram />
+                                </i>
+                              </Link>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

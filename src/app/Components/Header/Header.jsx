@@ -9,7 +9,7 @@ import {
   FaPinterestP,
   FaTwitter,
 } from 'react-icons/fa';
-import { FaAnglesRight, FaLocationDot } from 'react-icons/fa6';
+import { FaAnglesLeft, FaLocationDot } from 'react-icons/fa6';
 import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
 
 const Header = ({ isTopBar, variant }) => {
@@ -25,18 +25,18 @@ const Header = ({ isTopBar, variant }) => {
     logoLink: '/',
     navItems: [
       {
-        label: 'Home',
+        label: 'الرئيسية',
         href: '/',
     
       },
-      { label: 'Doctors', href: '/doctors' },
-      { label: 'About', href: '/about' },
+      { label: 'الأطباء', href: '/doctors' },
+      { label: 'من نحن', href: '/about' },
       {
-        label: 'Service',
+        label: 'خدماتنا',
         href: '/service',
       },
       {
-        label: 'Blog',
+        label: 'المدونة',
         href: '/blog',
       },
       {
@@ -52,7 +52,7 @@ const Header = ({ isTopBar, variant }) => {
       },
     ],
     btnUrl: '/contact',
-    btnText: 'Contact Now',
+    btnText: 'تواصل معنا',
   };
 
   const handleOpenMobileSubmenu = index => {
@@ -241,7 +241,7 @@ const Header = ({ isTopBar, variant }) => {
                 <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1">
                   <span>{menu.btnText}</span>
                   <i>
-                    <FaAnglesRight />
+                    <FaAnglesLeft />
                   </i>
                 </Link>
               </div>

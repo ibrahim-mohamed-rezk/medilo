@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { FaAnglesRight } from "react-icons/fa6";
+import { FaAnglesLeft } from "react-icons/fa6";
 import Slider from "react-slick";
 import Button from "../Buttons";
 import Image from "next/image";
@@ -72,24 +72,24 @@ const HeroSection = ({ data }) => {
                               __html: items.contactTitle,
                             }}
                           />
-                          <p>Call Us at: +2 56 54 1453</p>
+                          <p>اتصل بنا على: +2 56 54 1453</p>
                         </div>
                         <div className="cs_hero_btns">
                           <Button
-                            btnText={"Contact Now"}
+                            btnText={"تواصل معنا"}
                             variant={"cs_btn cs_style_1 cs_color_1"}
-                            btnIcons={<FaAnglesRight />}
+                            btnIcons={<FaAnglesLeft />}
                             btnUrl={"/contact"}
                           />
                           <Button
-                            btnText={"Discover More"}
+                            btnText={"اكتشف المزيد"}
                             variant={"cs_btn cs_style_1 cs_color_2"}
-                            btnIcons={<FaAnglesRight />}
+                            btnIcons={<FaAnglesLeft />}
                             btnUrl={"/services"}
                           />
                         </div>
                       </div>
-                      <div className="cs_hero_shape">
+                      {/* <div className="cs_hero_shape">
                         <Image
                           src={items.iconImgUrl}
                           className="cs_spinner_img"
@@ -97,7 +97,7 @@ const HeroSection = ({ data }) => {
                           width={142}
                           height={190}
                         />
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

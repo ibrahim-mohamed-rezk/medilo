@@ -1,6 +1,8 @@
+import { homeCounterData } from "@/libs/data/data";
 import Image from "next/image";
 
-const CounterSection = ({ data }) => {
+const CounterSection = () => {
+  
   return (
     <div className="container">
       <div className="cs_counter_content cs_blue_bg">
@@ -8,7 +10,7 @@ const CounterSection = ({ data }) => {
         <Image src="/assets/img/counter_shape.png" alt="img" width={1296} height={196}   />
         </div>
         <div className="cs_counter_1_wrap">
-          {data.map((counter, index) => (
+          {homeCounterData.map((counter, index) => (
             <div className="cs_counter cs_style_1" key={index}>
               <div className="cs_counter_icon cs_center">
               <Image src={counter.iconUrl} alt="img" width={37} height={37}   />
